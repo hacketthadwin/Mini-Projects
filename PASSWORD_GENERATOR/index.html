@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>document</title>
+        <!-- <meta name="description" content=""> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    </head>
+    <body>
+        <div class="bg-gradient-to-b from-gray-900 to-black w-screen xl:min-h-screen h-auto backdrop-blur-lg flex flex-col items-center">
+            <div class="text-7xl text-white font-bold mt-[6rem]">
+                PASSWORD GENERATOR
+            </div>
+            <div class="flex border-2 mt-[5rem] p-[1.1rem] border-white/30 rounded-lg backdrop-blur-3xl shadow-[0px_5px_90px_rgba(255,255,255,0.6)]">
+                <div id="password" class="text-gray-400 font-semibold text-4xl pl-8"></div>
+                <button id="copybutton" class="text-white text-3xl ml-[15rem] hover:scale-125 animation duration-200">
+                    <i class="fa-solid fa-copy"></i>
+                  </button>
+            </div>
+
+            <div class="flex flex-col border-2 mt-[4rem] px-[4.7rem] py-[3rem] border-white/30 rounded-lg backdrop-blur-3xl shadow-[0px_5px_90px_rgba(255,255,255,0.3)]">
+                <div class="text-white font-semibold text-2xl"> Password length <span id="passwordlengthvalue" class="ml-[6rem] text-yellow-500 font-semibold">0</span></div>
+                <input id="rangeselector" type="range" value="0" min="0" max="20" step="1" class="w-[20rem] appearance-none h-3 bg-gray-400 rounded-lg mt-8
+                accent-purple-500 
+                [&::-webkit-slider-thumb]:appearance-none 
+                [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-8
+                [&::-webkit-slider-thumb]:bg-yellow-500 [&::-webkit-slider-thumb]:rounded-full 
+                [&::-webkit-slider-thumb]:shadow-lg cursor-pointer">
+
+                <label class="flex items-center space-x-3 cursor-pointer mt-5">
+                    <input id="uppercase" type="checkbox" class="peer hidden">
+                    <div class="h-6 w-6 rounded-md border-2 border-gray-500 
+                                peer-checked:bg-yellow-500 peer-checked:border-blue-700 
+                                flex items-center justify-center">
+                        
+                    </div>
+                    <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100 text-black relative left-[-1.95rem]"></i>
+                    <span class="text-white font-semibold text-lg relative left-[-1.5rem]">Include Upper Case</span>
+                </label>
+
+                <label class="flex items-center space-x-3 cursor-pointer mt-5">
+                    <input id="lowercase" type="checkbox" class="peer hidden">
+                    <div class="h-6 w-6 rounded-md border-2 border-gray-500 
+                                peer-checked:bg-yellow-500 peer-checked:border-blue-700 
+                                flex items-center justify-center">
+                        
+                    </div>
+                    <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100 text-black relative left-[-1.95rem]"></i>
+                    <span class="text-white font-semibold text-lg relative left-[-1.5rem]">Include Lower Case</span>
+                </label>
+
+                <label class="flex items-center space-x-3 cursor-pointer mt-5">
+                    <input id="symbols" type="checkbox" class="peer hidden">
+                    <div class="h-6 w-6 rounded-md border-2 border-gray-500 
+                                peer-checked:bg-yellow-500 peer-checked:border-blue-700 
+                                flex items-center justify-center">
+                        
+                    </div>
+                    <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100 text-black relative left-[-1.95rem]"></i>
+                    <span class="text-white font-semibold text-lg relative left-[-1.5rem]">Include Symbols</span>
+                </label>
+
+                <label class="flex items-center space-x-3 cursor-pointer mt-5">
+                    <input id="numbers" type="checkbox" class="peer hidden">
+                    <div class="h-6 w-6 rounded-md border-2 border-gray-500 
+                                peer-checked:bg-yellow-500 peer-checked:border-blue-700 
+                                flex items-center justify-center">
+                        
+                    </div>
+                    <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100 text-black relative left-[-1.95rem]"></i>
+                    <span class="text-white font-semibold text-lg relative left-[-1.5rem]">Include Numbers</span>
+                </label>
+
+                  <div class="text-xl mt-5 text-white font-bold">STRENGTH <span id="strength" class="relative left-[10rem] pl-[1.7rem] bg-gray-400 w-5 h-5 rounded-full shadow-[0px_0px_20px_white]"></span></div>
+
+                  <button id="generatebutton" class="text-3xl text-white font-bold border-2 mt-[4rem] px-[3.7rem] py-[1rem] border-white/30 rounded-lg backdrop-blur-3xl shadow-[0px_5px_90px_rgba(234,179,8,1)] animation duration-200 hover:scale-125">GENERATE</button>
+                  
+                  <script src="script.js"></script>
+
+            </div>
+        </div>
+    </body>
+</html>
